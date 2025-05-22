@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
+import ResumeDownload from "@/components/ResumeDownload";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <HeroSection />
+      <ExperienceTimeline />
+      <SkillsSection />
+      <ResumeDownload />
+      <ContactSection />
+      <footer className="bg-portfolio-blue-dark text-white py-8">
+        <div className="container max-w-6xl mx-auto px-4 text-center">
+          <p>&copy; {new Date().getFullYear()} Sahand Sorouri. All rights reserved.</p>
+          <p className="text-sm text-white/70 mt-2">Senior Product Manager</p>
+        </div>
+      </footer>
     </div>
   );
 };
